@@ -79,7 +79,7 @@
                     <input type="number" name="nota1" id="nota1id" placeholder="Primeira Nota" required step="0.1" min="0" max="10">
                 </div> 
                 <div>
-                    <input type="number" name="nota2" id="nota2id" placeholder="Segunda Nota" required step="0.1">
+                    <input type="number" name="nota2" id="nota2id" placeholder="Segunda Nota" required step="0.1" min="0" max="10">
                 </div>
             </fieldset>
             <fieldset>
