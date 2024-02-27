@@ -44,12 +44,18 @@
         }
 
         form input:focus::placeholder {
-            font-size: 0.9em;
+            font-size: 0.9 em;
             transform: translateY(-10px);
         }
 
         form input[type="submit"] {
             width: 100px;
+            cursor: pointer;
+            transition: 0.4s all;
+        }
+
+        form input[type="submit"]:hover {
+            transform: translate(-2px, -2px);
         }
 
         form fieldset {
