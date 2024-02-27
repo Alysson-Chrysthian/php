@@ -52,30 +52,34 @@
 </head>
 <body>
     <form action="questao-5.php" method="get">
-        <div>
-            <input type="number" name="peso" id="pesoid" placeholder="Peso" step="0.01" required>
-        </div>
-        <div>
-            <input type="number" name="alt" id="altid" placeholder="Altura" step="0.01" required>
-        </div>
-        <div>
-            <input type="submit" value="Enviar">
-        </div>
-        <div>
-            <input type="text" name="resul" id="resulid" placeholder="Categoria" readonly value=
-            "<?php
-                if ($_GET) {
-                    $peso = $_GET["peso"];
-                    $altura = $_GET["alt"];
-
-                    if ($peso >= 50 && $peso < 60 && $altura < 1.70) {
-                        echo "Novato";
-                    } else if (($peso >= 60 && $peso <= 80) && ($altura >= 1.70 && $altura < 1.90)) {
-                        echo "Profissional";
+        <fieldset>
+            <legend>Ver Categoria</legend>
+            <div>
+                <input type="number" name="peso" id="pesoid" placeholder="Peso" step="0.01" required>
+            </div>
+            <div>
+                <input type="number" name="alt" id="altid" placeholder="Altura" step="0.01" required>
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+            <div>
+                <input type="text" name="resul" id="resulid" placeholder="Categoria" readonly value=
+                "<?php
+                    if ($_GET) {
+                        $peso = $_GET["peso"];
+                        $altura = $_GET["alt"];
+                        if (($peso >= 50 && $peso < 60) && $altura < 1.70) {
+                            echo "Novato";
+                        } else if (($peso >= 60 && $peso <= 80) && ($altura >= 1.70 && $altura < 1.90)) {
+                            echo "Profissional";
+                        } else {
+                            echo "Sem categoria";
+                        }
                     }
-                }
-            ?>">
-        </div>
+                ?>">
+            </div>
+        </fieldset>
     </form>
 </body>
 </html>

@@ -65,7 +65,10 @@
             <fieldset>
                 <legend>Frequencia</legend>
                 <div>
-                    <input type="number" name="frq" id="frqid"  placeholder="Frequencia(0 - 100)" max="100" min="0" required>
+                    <input type="number" name="aula_total" id="altot" placeholder="Total de aulas" required>
+                </div>
+                <div>
+                    <input type="number" name="faltas" id="fltid" placeholder="Total de faltas" required>
                 </div>
             </fieldset>
             <fieldset>
@@ -79,9 +82,11 @@
                         if ($_GET) {
                             $nota1 = $_GET["nota1"];
                             $nota2 = $_GET["nota2"];
-                            $freq = $_GET["frq"];
+                            $aulastot = $_GET["aula_total"];
+                            $faltas = $_GET["faltas"];
 
                             $media = ($nota1 + $nota2) / 2;
+                            $freq = ($aulastot - $faltas) / $aulastot * 100;
 
                             if ($media >= 8.5 && $freq >= 70) {
                                 echo "Aprovado";
