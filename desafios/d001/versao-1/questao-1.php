@@ -29,7 +29,7 @@
             width: 190px;
         }
 
-        form input[type="number"], form input:focus {
+        form input[type="number"], form input[type="number"]:focus {
             padding: 10px 0px 10px 0px;
             outline: none;
             border: none;
@@ -37,14 +37,14 @@
             border-radius: 0;
         }
 
-        form input::placeholder {
+        form input[type="number"]::placeholder {
             font-weight: bold;
             font-size: 1.1em;
             transition: 1s all;
         }
 
-        form input:focus::placeholder {
-            font-size: 0.9 em;
+        form input[type="number"]:focus::placeholder {
+            font-size: 0.9em;
             transform: translateY(-10px);
         }
 
