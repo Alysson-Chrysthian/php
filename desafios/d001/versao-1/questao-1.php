@@ -56,6 +56,7 @@
 
         form input[type="submit"]:hover {
             transform: translate(-2px, -2px);
+            box-shadow: 1px 1px 2px 2px #00000044;
         }
 
         form fieldset {
