@@ -94,7 +94,116 @@
             "Function" => "sum",
         ];
         $soma = $Associative_Array_With_Func["Function"](15, 20);
-        print($soma);
-    ?>    
+        print($soma."<br>");
+        #quando temos um foreach que usa um variavel de referencia e não uma copia do array original, a variavel de referencia ainda fica ligado ao array original mesmo após o termino do foreach como demonstrado no codigo abaixo
+        print("<br>");
+        $MeuVetor = [
+            "Frutas", 
+            "Carros", 
+            "Pessoas"
+        ];
+        foreach ($MeuVetor as &$x) {
+          if ($x == "Carros") {
+              $x = "Motos";
+          }
+          print($x);
+        }
+        print("<br>");
+        var_dump($MeuVetor);
+        $x = "Humanos";
+        print("<br>");
+        var_dump($MeuVetor);
+        #Para desasociar um array da sua variavel de referencia utilizamos a função unset()
+        print("<br>");
+        $MeuVetor = [
+            "Frutas",
+            "Carros",
+            "Pessoas",
+        ];
+        foreach ($MeuVetor as &$y) {
+            if ($y == "Frutas") {
+                $y = "Vegetal";
+            }
+            print($y);
+        }
+        print("<br>");
+        var_dump($MeuVetor);
+        print("<br>");
+        unset($y);
+        $y = "Humanos";
+        var_dump($MeuVetor);
+        #A função unset() serve basicamente para apagar uma variavel da memoria
+        #Adicionando valores a um array associativo
+        $Professores = [
+            "Informatica" => "Elias",
+            "Programação" => "Paulo",
+            "Portugues" => "Thaynara",
+            "Matematica" => "Maria"
+        ];
+        print("<br><br>");
+        var_dump($Professores);
+        print("<br>");
+        $Professores += ["Ingles" => "Marcelo", "Geografia" => "Thiago"];
+        var_dump($Professores);
+        print("<br><br>");
+        #Removendo valores de um array
+        $Professores_index = [
+            "Elias",
+            "Paulo",
+            "Thaynara",
+            "Maria"
+        ];
+        array_splice($Professores_index, 0, 2);
+        print("<br>");
+        print_r($Professores_index);
+        print("<br>");
+        #Removendo valores de array associativos
+        $Professores_Associative = [
+            "Informatica" => "Elias",
+            "Programação" => "Paulo",
+            "Portugues" => "Thaynara",
+            "Matematica" => "Maria"
+        ];
+        #você pode utilizar o unset() ou o array_diff()
+        $Professores_Associative_diffed = array_diff($Professores_Associative, ["Elias", "Maria"]);
+        var_dump($Professores_Associative_diffed);
+        #Agora uma demonstração com o unset
+        print("<br>");
+        unset($Professores_Associative["Informatica"], $Professores_Associative["Portugues"]);
+        print_r($Professores_Associative);
+        #Temos o array_pop() que remove o ultimo valor do array e o array_shift() que remove o primeiro valor do array
+    
+        /*
+        sort() - sort arrays in ascending order - se usado com associative arrays transforma eles em index arrays
+
+        rsort() - sort arrays in descending order
+
+        asort() - sort associative arrays in ascending order, according to the value
+
+        ksort() - sort associative arrays in ascending order, according to the key
+        
+        arsort() - sort associative arrays in descending order, according to the value
+        
+        krsort() - sort associative arrays in descending order, according to the key
+        */
+        print("<br><br>");
+        $Numeros = [
+            14,
+            215,
+            24,
+            67,
+            12,
+            41,
+            16
+        ];
+        sort($Numeros);
+        print_r($Numeros);
+        print("<br>");
+        asort($Professores_Associative);
+        print_r($Professores_Associative);
+        sort($Professores_Associative);
+        print("<br>");
+        print_r($Professores_Associative);
+    ?>   
 </body>
 </html>
