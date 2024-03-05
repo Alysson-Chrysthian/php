@@ -18,7 +18,6 @@
         $mail = ValidarInput($_POST["email"]);
         $senha = ValidarInput($_POST["senha"]);
         $nasc = ValidarInput($_POST["nasc"]);
-
         /*VALIDAÇÃO DOS VALORES*/
         /*VALIDAÇÃO NOME*/
         if (strlen($nome) < 3 || !preg_match($nome_padrão, $nome)) {
