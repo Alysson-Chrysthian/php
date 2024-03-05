@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+form {
+    display: grid;
+    justify-content: center;
+}
+
+form input {
+    padding: 5px;
+    width: 180px;
+}
+
+form div:nth-last-child(1) input {
+    width: 90px;
+    margin-top: 5px;
+}
+
+form fieldset {
+    padding: 20px 35px;
+    width: 500px;
+}
+
+span.erro {
+    color: red;
+}
