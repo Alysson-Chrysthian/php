@@ -14,6 +14,7 @@
 
         print_r($String_teste_vetor);
         print(strtoupper($String_teste_vetor[4]));
+        print($String_teste);
     ?>
 </body>
 </html>

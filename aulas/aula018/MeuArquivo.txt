@@ -1,0 +1,6 @@
+PHP - PHP: HyperText Preprocessor
+SQL - SQL: Query Language
+HTML - HyperText Markup Language
+CSS - Cascading Style Sheets
+UX - User Experience
+GUI - Graphic User Interface
