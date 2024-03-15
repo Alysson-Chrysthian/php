@@ -7,9 +7,10 @@
 </head>
 <body>
     <?php
+        //Inicializando a variavel
+        $numero = "1";
         //Tenta executar esse comando
         try {
-            $numero = "1";
             if (is_string($numero)) {
                 throw new Exception("Tipo Invalido");
             }
