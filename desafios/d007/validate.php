@@ -24,7 +24,7 @@
     ];
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $nome = FormatarInput($_POST["nome"]);     //Nome    (A verificar)
-        $Nasc = FormatarInput($_POST["nasc"]);    //Idade   (A verificar)
+        $Nasc = FormatarInput($_POST["nasc"]);     //Idade   (A verificar)
         $email = FormatarInput($_POST["email"]);   //Email   (A Verificar)
         $senha = FormatarInput($_POST["senha"]);   //Senha   (A verificar)
         $telefone = FormatarInput($_POST["tel"]);  //Telefone(A verificar)
