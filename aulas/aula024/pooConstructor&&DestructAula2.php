@@ -9,7 +9,7 @@
         public float $salario;
         public int $cod;
         //Criando o metodo construtor
-        public function __construct(String $nome, int $idade, bool $sexo, float $salario) {
+        public function __construct(String $name, int $idade, bool $sexo, float $salario) {
             //Aplicando os meus atributos ao meu objeto
             $this -> nome = $nome;
             $this -> idade = $idade;
