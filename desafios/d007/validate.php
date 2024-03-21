@@ -63,24 +63,14 @@
                 "estado" => $estado
             ];
             $InformaçõesJson = json_encode($Informações);
-            //Tentando abrir o arquivo json
-            try {
-                $ArqJson = fopen("transportador.json","x+");
-            }            
-            //Abrindo ele em caso de falha
-            catch(Exception $e) {
-                $ArqJson = fopen("transportador.json", "w+");
-            }
-            finally {
-                //escrevendo as informações no arquivo
-                rewind($ArqJson);
-                fwrite($ArqJson, $InformaçõesJson);
-                //Fechando o arquivo
-                fclose($ArqJson);
-                //Mudando de pagina
-                header("location: pagina.php");
-                exit();
-            }
+            $ArqJson = fopen("transportador.json", "w+");
+            rewind($ArqJson);
+            fwrite($ArqJson, $InformaçõesJson);
+            //Fechando o arquivo
+            fclose($ArqJson);
+            //Mudando de pagina
+            header("location: pagina.php");
+            exit();
         } else {
             print("<p style=\"color: red;\">$Erro</p>");
         }

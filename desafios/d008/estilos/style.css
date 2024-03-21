@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #3775e9;
+    overflow: hidden;
+}
+
+main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*Configurando a parte de validação*/
+div#erro {
+    background-color: rgba(255, 0, 0, 0.336);
+    color: rgb(128, 3, 3);
+    padding: 5px;
+}
+/*Inicio do formulario*/
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 320px;
+    height: 200px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 5px;
+    width: 100%;
+}
+/*Parte interativa do formulario*/
+div#interaçãoForm, input.botao {
+    color: blue;
+}
+
+input.botao {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input.botao:hover {
+    text-decoration: underline;
+}
+
+a {
+    font-size: 0.8em;
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

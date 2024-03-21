@@ -48,4 +48,26 @@
     foreach($FuncionarioInfo as $k => $v) {
         print("\n$k:$v");
     }
+    //Utilizando a keyword final
+    //A clase abaixou nao pode ter herdeiros, graças a keyword final
+    final class produtos {
+        //Definindo atributos
+        public float $preço;
+        public string $validade;
+        public int $estoque;
+        //Definindo metodos
+        public function __construct($preço, $validade, $estoque) {
+            $this->preço = $preço;
+            $this->validade = $validade;
+            $this->estoque = $estoque;
+        }
+        public function verder($Unidades) {
+            $this->estoque -= $Unidades;
+        }
+    }
+    /*
+    O codigo abaixo ocasionaria em um erro
+    class ProdutoLimpeza extends produtos {
+    }
+    */
 ?>
