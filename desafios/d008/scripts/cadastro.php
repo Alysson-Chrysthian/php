@@ -21,8 +21,11 @@
     $user = $_SESSION["user"];
     $adm = $_SESSION["adm"];
 
-    $nome = "";
-    $senha = "";
+    $_SESSION["nome"] = null;
+    $_SESSION["senha"] = null;
+
+    $nome = $_SESSION["nome"];
+    $senha = $_SESSION["senha"];
     $erro;
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION["NivelAcesso"] = null;

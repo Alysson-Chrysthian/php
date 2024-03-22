@@ -6,6 +6,9 @@
     <title>Pagina de adm</title>
     <link rel="stylesheet" href="../estilos/style.css">
 </head>
+<?php
+    require_once "../scripts/verificarLogin.php";
+?>
 <body>
     <main>
         <h2>Esta é a pagina de <strong>Administrador</strong></h2>

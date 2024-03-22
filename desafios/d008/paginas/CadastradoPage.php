@@ -17,6 +17,7 @@
 </head>
 <?php
     session_start();
+    require_once "../scripts/verificarLogin.php";
     $acesso;
     $pagina;
     if ($_SESSION["NivelAcesso"]) {
