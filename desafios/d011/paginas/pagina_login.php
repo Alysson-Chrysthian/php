@@ -9,7 +9,7 @@
     Chamando script de validação de formulario
     Chamando script de captura de informações do formulario
     -->
-    <?php require_once "../scripts/PegandoInfoForm.php" ?>
+    <?php require_once "../scripts/SalvandoFotoDePerfil.php" ?>
     <?php require_once "../scripts/ValidandoForm.php" ?>
     <style>
         /*Configurando mensagem de erro*/
