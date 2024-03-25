@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: Courier, monospace;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 20px;
+}
+
+/*Perfil*/
+    /*Foto De Perfil*/
+        main section#Perfil {
+            padding: 30px;
+            border: 2px solid #0000006e;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        figure#FotoDePerfil img {
+            width: 150px;
+            outline: 1px solid rgba(0, 0, 0, 0.267);
+            border-radius: 50%;
+        }
+
+        figure#FotoDePerfil {
+            display: inline-block;
+        }
+    /*Fim da foto de perfil*/
+    /*Descrição do perfil*/
+        article#Informações, article#Informação p {
+            position: absolute;
+            top: 50%;
+            transform: translate(20px, -50%);
+            display: inline-block;
+            font-weight: bold;
+        }
+    /*Fim da descrição do perfil*/
+/*Fim do Perfil*/

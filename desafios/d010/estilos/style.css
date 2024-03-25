@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: grid;
+    justify-content: center;
+}
+
+form label {
+    position: relative;
+}
+
+form label span {
+    position: absolute;
+    right: 0%;
+    top: -2px;
+    border-left: 1px solid #00000054;
+}
+
+form input {
+    padding: 3px;
+    margin: 0px;
+}
+
+form input:focus, form input {
+    border: 0px solid #00000054;
+    outline: 1px solid #00000054;
+}
+
+input[type="submit"] {
+    transform: translateX(-2px);
+    border-left: none;
+}
+
+#resulid {
+    transform: translateX(-1px);
+    margin-top: 10px;
+    height: 300px;
+    max-width: 300px;
+    border-radius: 10px;
+    resize: none;
+}
